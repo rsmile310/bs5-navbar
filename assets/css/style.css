@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+header,
+#bdNavbar {
+  background-color: #0179a8;
+}
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none !important;
+}
+.bd-navbar .bi {
+  width: 1em;
+  height: 1em;
+}
+.bd-navbar .bi.theme-icon-active {
+  fill: #fff;
+}
+.bd-navbar .nav-link {
+  color: #fff;
+}
+.bd-navbar-nav .nav-link {
+  position: relative;
+  width: fit-content;
+}
+.bd-navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #222;
+  transition: width ease 0.3s;
+}
+.bd-navbar-nav .nav-item:hover > .nav-link::after,
+.bd-navbar-nav .nav-item > .nav-link.active::after {
+  width: 100%;
+}
+.bd-navbar .navbar-brand:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+.bd-navbar .navbar-brand {
+  transition: 0.2s ease-in-out transform;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  text-decoration: none;
+  background-color: #0179a8;
+}
+.sub-navbar-box {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sub-navbar-box .nav-link,
+.sub-navbar-box .nav-link.active {
+  color: #222;
+}
+.mb-6 {
+  margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  .sub-navbar-box {
+    position: initial;
+  }
+  .sub-navbar-box .nav-link,
+  .sub-navbar-box .nav-link.nav-link.active {
+    color: #fff;
+  }
+}
