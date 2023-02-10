@@ -2,6 +2,7 @@ let navLinkEle = document
   .querySelector(".bd-navbar-nav")
   .querySelectorAll(".nav-link");
 let subNavLinkEle = document.querySelectorAll(".sub-nav-link");
+let dropdownItem
 
 navLinkEle.forEach(function (item) {
   item.addEventListener("click", function () {
